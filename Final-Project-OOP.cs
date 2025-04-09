@@ -7,6 +7,31 @@ using System.Threading.Tasks;
 
 namespace FinalProject
 {
+    public class ConnectFour
+    {
+        private Gameboard board;
+        private Player[] players;
+        private int currentPlayerIndex;
+        private bool gameover;
+        public void Start()
+        {
+            Console.WriteLine("Welcome to Connect Four!");
+            InitializeGame();
+            PlayGame();
+        }
+        private void InitaializeGame()
+        {
+        }
+        private void PlayGame()
+        {
+        }
+        private void EndGame(string message)
+        {
+        }
+        private int GetValidInput(int min, int max)
+        {
+        }
+        // have changed it 
     internal class Program
     {
         static char[,] board = new char[6, 7];
