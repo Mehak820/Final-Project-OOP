@@ -1,4 +1,4 @@
-﻿using System;
+Game b﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Permissions;
@@ -21,7 +21,28 @@ namespace FinalProject
         }
         private void InitaializeGame()
         {
+          board = new GameBoard();
+            gameOver = false;
+            
+            Console.WriteLine("Select game mode: ");
+            Console.WriteLine("1. Two Players");
+            Console.WriteLine("2. Player vs Computer");
+            Console.Write("Enter choice (1-2): ");
+            
+            int choice = GetValidInput(1, 2);
+            players = new Player[2];
+            players[0] = new HumanPlayer('X', "Player 1");
+            if (choice == 1)
+            {
+                players[1] = new HumanPlayer('O', "Player 2");
+            }
+            else
+            {
+                players[1] = new ComputerPlayer('O', "Computer");
+            }
+            currentPlayerIndex = 0;
         }
+        
         private void PlayGame()
         {
         }
